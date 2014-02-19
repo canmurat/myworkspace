@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extracts string &apos;Make yourr choose&apos; into R.string.make_yourr_choose" description="Extracts string &apos;Make yourr choose&apos; into R.string.make_yourr_choose" file="/ButtonGroups1/res/layout/activity_main.xml" flags="6" id="com.android.ide.eclipse.adt.refactoring.extract.string" mode="EDIT_SOURCE" proj="/ButtonGroups1" rplc-all-java="false" rplc-all-xml="false" sel-end="3850" sel-start="3819" stamp="1384114053849" tok-esc="Make yourr choose" xml-attr-name="android:text"/>
+</session>

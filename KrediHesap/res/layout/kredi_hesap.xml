@@ -1,0 +1,136 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/SkyBlue"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.55"
+        android:background="@drawable/yapikredi" >
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.14"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kredi Seciniz :" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.14"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/sonuc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kredi Vadesi ( Ay )  :" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="261dp"
+                android:layout_height="wrap_content"
+                android:background="@color/White" />
+
+            <TextView
+                android:id="@+id/kredivadesisonuc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.14"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kredi Tutarı ( TL )" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <SeekBar
+                android:id="@+id/seekBar2"
+                android:layout_width="246dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.27"
+                android:background="@color/White" />
+
+            <TextView
+                android:id="@+id/kreditutarisonuc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.00" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.14" >
+
+        <TextView
+            android:id="@+id/sonuc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faiz Oranı :" />
+
+        <TextView
+            android:id="@+id/faizoranisonuc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.14" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:gravity="left"
+            android:onClick="hesapla"
+            android:text="AYLIK TAKSIK VE ODENECEK TOPLAM TUTARI HESAPLA" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

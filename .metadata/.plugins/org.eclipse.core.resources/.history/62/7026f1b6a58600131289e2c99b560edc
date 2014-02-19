@@ -1,0 +1,90 @@
+package com.example.AndroidYemekSepetiDb;
+
+import android.app.Activity;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+import com.example.VeriTabani.VeriTabanýSiparisler;
+
+public class PanelSiparisler extends Activity {
+
+	private SimpleAdapter adapter2;
+	private VeriTabanýSiparisler veritabaný;
+	private SimpleCursorAdapterClass2 adapter;
+	private Cursor kelimeListesiCursor;
+
+	private String[] projection = new String[] {
+			VeriTabanýSiparisler.SIPARIS_ID, VeriTabanýSiparisler.KULLANICI_ID,
+			VeriTabanýSiparisler.YEMEKLER, VeriTabanýSiparisler.ICECEKLER,
+			VeriTabanýSiparisler.SALATALAR, VeriTabanýSiparisler.TATLILAR,
+			VeriTabanýSiparisler.TOPLAM };
+
+	// Database icindeki verileri ListView'e map ederken from ve to 'yu
+	// kullanýyoruz .
+	private String[] from = new String[] {
+//			VeriTabanýSiparisler.SIPARIS_ID,
+			VeriTabanýSiparisler.KULLANICI_ID,
+			VeriTabanýSiparisler.YEMEKLER, VeriTabanýSiparisler.ICECEKLER,
+			VeriTabanýSiparisler.SALATALAR, VeriTabanýSiparisler.TATLILAR,
+			VeriTabanýSiparisler.TOPLAM };
+
+	private int[] to = new int[] {
+//			R.id.SiparisIdListItemTextView,
+			R.id.KullaniciIdListItemTextView, R.id.YemekListItemTextView,
+			R.id.IcecekListItemTextView, R.id.SalataListItemTextView,
+			R.id.TatliListItemTextView, R.id.ToplamListItemTextView, };
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.siparisler);
+		ekranKontrolleriniOlustur();
+	}
+
+	private void ekranKontrolleriniOlustur() {
+
+		veritabaný = new VeriTabanýSiparisler(this);
+
+		// Siparisleri Goruntulemek icin kullanýldý.
+		kelimeListesiCursor = butunUrunleriSorgula();
+		// adapter olusturuldu . kelimeListesiCursor cursor nesnesi ile
+		// veritabanýndaki degerler adapter'e set edildi
+		adapter = new SimpleCursorAdapterClass2(this, R.layout.listtextviews2,
+				kelimeListesiCursor, from, to, 0);
+
+		// ListView Olusturuldu ve adapter set edildi.
+		ListView SiparislerListView = (ListView) findViewById(R.id.SiparislerListView);
+		SiparislerListView.setAdapter(adapter);
+
+		SiparislerListView.setOnItemClickListener(new OnItemClickListener() {
+			
+
+			public void onItemClick(AdapterView arg0, View view, int position,
+					long id) {
+				adapter.setSelectedPosition(position);
+			}
+		});
+
+	}
+
+	// Butun siparisleri sorgulayýp onlarýn ListView'e düsmesini saglýyoruz.
+	private Cursor butunUrunleriSorgula() {
+
+		SQLiteDatabase db = veritabaný.getReadableDatabase();
+		return db
+				.rawQuery(
+						"select SiparisId as _id,KullaniciId,Yemekler,Icecekler,Salatalar,Tatlilar,Toplam from siparisler",
+						new String[] {});
+
+		
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extracts string &apos;TextView&apos; into R.string.textview" description="Extracts string &apos;TextView&apos; into R.string.textview" file="/myInnerClass2/res/layout/activity_my_inner_class2.xml" flags="6" id="com.android.ide.eclipse.adt.refactoring.extract.string" mode="EDIT_SOURCE" proj="/myInnerClass2" rplc-all-java="false" rplc-all-xml="false" sel-end="808" sel-start="786" stamp="1383037363299" tok-esc="TextView" xml-attr-name="android:text"/>
+</session>

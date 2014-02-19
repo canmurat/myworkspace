@@ -1,0 +1,16 @@
+package com.example.AndroidYemekSepetiDb;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class YoneticiPanel extends Activity {
+
+
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.yonetici_panel);
+	}
+	
+	
+
+}

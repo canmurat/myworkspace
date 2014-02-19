@@ -1,0 +1,210 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textYemekler"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Yiyecek_Seciniz" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/spinnerYemekler"
+            android:layout_width="150dp"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textyemekAdet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Adet" />
+
+            <EditText
+                android:id="@+id/edittextYemek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/butonYemek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sepete Ekle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textIcecekler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Icecek_Seciniz" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/spinnerIcecekler"
+            android:layout_width="150dp"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/texticecekAdet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Adet" />
+        
+            <EditText
+                android:id="@+id/edittextIcecek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" >
+
+                <requestFocus />
+            </EditText>
+
+            <requestFocus />
+
+            <Button
+                android:id="@+id/butonIcecek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sepete Ekle" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textSalatalar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Salata_Seciniz" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/spinnerSalatalar"
+            android:layout_width="150dp"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textsalataAdet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Adet" />
+
+            <EditText
+                android:id="@+id/edittextSalata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/butonSalata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sepete Ekle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textTatlilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tatli_Seciniz" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/spinnerTatlilar"
+            android:layout_width="150dp"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/texttatliAdet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Adet" />
+
+            <EditText
+                android:id="@+id/edittextTatli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/butonTatli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sepete Ekle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/yemeksepeti"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="140dp"
+            android:layout_height="78dp"
+            android:layout_gravity="right"
+            android:onClick="yemekSepeti"
+            android:text="Yemek Sepetim " />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hahay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

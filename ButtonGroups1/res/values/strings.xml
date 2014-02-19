@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ButtonGroups1</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="checkbox1">1.</string>
+    <string name="checkbox2">2.</string>
+    <string name="radiobutton1">1.</string>
+    <string name="radiobutton2">2.</string>
+    <string name="tooglebutton1">1.</string>
+    <string name="tooglebutton2">2.</string>
+    <string name="button1">1.</string>
+    <string name="button2">2.</string>
+    <color  name="red">#ffff0000</color>
+    <string name="make_yourr_choose">Make yourr choose</string>
+
+</resources>

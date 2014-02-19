@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"> YEMEK SEPETI </string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="titleAd">Ad</string>
+    <string name="titleFiyat">Fiyat</string>
+    <string name="kaydetButton">Kaydet</string>
+    <string name="guncelleButton">Güncelle</string>
+    <string name="silButton">Sil</string>
+    <string name="kullaniciad"> Adı</string>
+    <string name="kullanicisoyad"> Soyadı</string>
+    <string name="kullaniciDtarih">Dogum Tarihi (yyyy-aa-gg)</string>
+    <string name="kullanicitel">Telefon</string>
+    <string name="kullaniciadres">Adres</string>
+    <string name="kullaniciEposta">E-Posta</string>
+    <string name="kullaniciSifre">Sifre</string>
+    <string name="kullaniciSifreTekrar">Sifre Tekrar</string>
+    
+
+</resources>

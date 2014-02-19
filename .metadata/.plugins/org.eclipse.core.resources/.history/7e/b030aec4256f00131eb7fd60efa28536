@@ -1,0 +1,322 @@
+package com.hastane;
+
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.WindowConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
+public class DoktorIslemleri extends JFrame {
+
+	static DefaultTableModel model;
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private static JTable table;
+	private JTextField textAd;
+	static Connection conn;
+	private JTextField textSoyad;
+	static String[] basliklar = { "DoktorNo", "Ad", "Soyad", "Dogum Tarihi",
+			"Cinsiyet", "Adres", "Tel", "Uzmanlýk" };
+	static String DoktorNo;
+	static String Ad;
+	static String Soyad;
+	static String DogumTarih;
+	static String Cinsiyet;
+	static String Adres;
+	static String Tel;
+	static String Uzmanlik;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					DoktorIslemleri frame = new DoktorIslemleri();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public DoktorIslemleri() {
+		setTitle("Doktor Islemleri");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 703, 411);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		table = new JTable();
+		table.setBounds(26, 80, 632, 145);
+		contentPane.add(table);
+
+		// JScrollPane scroll = new JScrollPane(table);
+		// scroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		// scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+		// scroll.getViewport().add(table, null);
+		// contentPane.add(scroll);
+
+		JButton btnAra = new JButton("Ara");
+
+		btnAra.setBounds(480, 30, 89, 23);
+		contentPane.add(btnAra);
+
+		JButton btnDoktorEkle = new JButton("EKLE");
+		final JFrame doktorekle = new DoktorEkle();
+		btnDoktorEkle.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				doktorekle.setVisible(true);
+
+			}
+		});
+		doktorekle.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+
+				doktorekle.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+			}
+
+		});
+
+		btnDoktorEkle.setBounds(346, 276, 89, 71);
+		contentPane.add(btnDoktorEkle);
+
+		JButton btnDoktorSl = new JButton("SIL");
+		btnDoktorSl.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				int secilensatir = table.getSelectedRowCount();   // tablonun secilen satir degegerini alýyorum . amac, hic secilmediyse uyarmak.
+				int selectedRowIndex = table.getSelectedRow();     // tablonun secilen satrýndaki ve , 
+				int selectedColumnIndex = table.getSelectedColumn();   // secilen sutunundaki degerleri al, VeriTabnýnda bu deger ile tabloyu sil .
+				String silinecekNo = (String) table.getModel().getValueAt(
+						selectedRowIndex, selectedColumnIndex);
+
+				int secim = JOptionPane
+						.showConfirmDialog(                // Silmek istediginizden Emin misiniz ? 
+								null,
+								"Secilen Doktor'u silmek istediginizden emin misiniz ? ",
+								"Doktoru Sil", JOptionPane.YES_NO_CANCEL_OPTION);
+				if (secim == JOptionPane.YES_OPTION) {     // Cevap YES_OPTION(EVET) ise sil. 
+
+					try {
+						System.out.println("secilen 'in doktor no su = "+silinecekNo);
+						new DoktorSil(silinecekNo);
+					} catch (ClassNotFoundException e1) {
+						e1.printStackTrace();
+					}
+
+					if (secilensatir >= 0) {       // tablodan birsey secilmis ise sil . yoksa uyar ..
+						DefaultTableModel model = (DefaultTableModel) table
+								.getModel();
+						model.removeRow(secilensatir);
+						return;
+					} else {
+						JOptionPane.showMessageDialog(null,
+								"Hic bir sey secmediniz !");
+					}
+				} else if (secim == JOptionPane.CANCEL_OPTION) {
+					return;
+				} else {
+					return;
+				}
+
+			}
+		});
+		btnDoktorSl.setBounds(468, 276, 89, 71);
+		contentPane.add(btnDoktorSl);
+
+		JButton btnKapat = new JButton("Kapat");
+		btnKapat.setBounds(588, 276, 89, 71);
+		contentPane.add(btnKapat);
+
+		textAd = new JTextField();
+		textAd.setBounds(119, 31, 86, 20);
+		contentPane.add(textAd);
+		textAd.setColumns(10);
+
+		JLabel lblDoktorAd = new JLabel("Doktor Ad\u0131 : ");
+		lblDoktorAd.setBounds(50, 34, 72, 14);
+		contentPane.add(lblDoktorAd);
+
+		JLabel lblNewLabel = new JLabel("Doktor Soyad\u0131:");
+		lblNewLabel.setBounds(226, 34, 75, 14);
+		contentPane.add(lblNewLabel);
+
+		textSoyad = new JTextField();
+		textSoyad.setBounds(301, 31, 86, 20);
+		contentPane.add(textSoyad);
+		textSoyad.setColumns(10);
+
+		JButton btnDoktorlar = new JButton("GORUNTULE");
+		btnDoktorlar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				try {
+					TabloyuDoldur("select * from doktorlar");
+				} catch (ClassNotFoundException e) {
+
+					e.printStackTrace();
+//					JOptionPane.showMessageDialog(null,
+//							"Tabloyu doldurmada hata!");
+				}
+			}
+		});
+		btnDoktorlar.setBounds(210, 277, 105, 68);
+		contentPane.add(btnDoktorlar);
+
+		btnAra.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				System.out.println("textAd.getText()= " + textAd.getText());
+				System.out.println("textSoyad.getText()= "
+						+ textSoyad.getText());
+
+				try {
+					if (DoktorAra(textAd.getText(), textSoyad.getText())) {
+
+						TabloyuDoldur("select * from doktorlar where (ad='"
+								+ textAd.getText() + "'" + "and soyad='"
+								+ textSoyad.getText() + "') or ad ='"
+								+ textAd.getText() + "'" + "or soyad='"
+								+ textSoyad.getText() + "';");
+
+					}
+				} catch (ClassNotFoundException e) {
+
+					e.printStackTrace();
+				}
+			}
+		});
+
+	}
+
+	public static Boolean DoktorAra(String DoktorAd, String DoktorSoyad)
+			throws ClassNotFoundException {
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=Hastane;user=mehmet;password=1234567";
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		Boolean doktorvarmi = false;
+
+		model = new DefaultTableModel();
+		model.setColumnIdentifiers(basliklar);
+		table.setModel(model);
+
+		try {
+			conn = DriverManager.getConnection(url);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+
+			PreparedStatement ps = conn
+					.prepareStatement("select * from doktorlar");
+
+			ResultSet rs = ps.executeQuery();
+			int i = 0;
+			while (rs.next()) {
+
+				Ad = rs.getString("Ad");
+				Soyad = rs.getString("Soyad");
+
+				if (DoktorAd.trim().equals(Ad.trim())
+						|| DoktorSoyad.trim().equals(Soyad.trim())) {
+					doktorvarmi = true;
+
+				}
+				i++;
+			}
+			if (i < 1) {
+				JOptionPane.showMessageDialog(null, "Kayýt Bulunamadý",
+						"Error", JOptionPane.ERROR_MESSAGE);
+			}
+			if (i == 1) {
+				System.out.println(i + " Record Found");
+			}
+
+			rs.close();
+			ps.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return doktorvarmi;
+
+	}
+
+	public static void TabloyuDoldur(String sorgu)
+			throws ClassNotFoundException {
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=Hastane;user=mehmet;password=1234567";
+//		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+		model = new DefaultTableModel();
+		model.setColumnIdentifiers(basliklar);
+		table.setModel(model);
+
+		try {
+			conn = DriverManager.getConnection(url);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		try {
+
+			PreparedStatement ps = conn.prepareStatement(sorgu);
+
+			ResultSet rs = ps.executeQuery();
+			int i = 0;
+			while (rs.next()) {
+
+				DoktorNo = rs.getString("DoktorNo");
+				Ad = rs.getString("Ad");
+				Soyad = rs.getString("Soyad");
+				DogumTarih = rs.getString("DogumTarihi");
+				Cinsiyet = rs.getString("Cinsiyet");
+				Adres = rs.getString("Adres");
+				Tel = rs.getString("Tel");
+				Uzmanlik = rs.getString("Uzmanlik");
+
+				model.addRow(new Object[] { DoktorNo, Ad, Soyad, DogumTarih,
+						Cinsiyet, Adres, Tel, Uzmanlik });
+				i++;
+			}
+			if (i < 1) {
+				JOptionPane.showMessageDialog(null, "No Record Found", "Error",
+						JOptionPane.ERROR_MESSAGE);
+			}
+			if (i == 1) {
+				System.out.println(i + " Record Found");
+			}
+
+			rs.close();
+			ps.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

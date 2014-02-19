@@ -1,0 +1,75 @@
+package com.Siparis;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/Uyeler")
+public class Uyeler extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	String newuser;
+	String passwd;
+	String passwdtekrar;
+	static String username ="";
+	String textarea;
+	String err = "alert(\"haydar\")";
+    
+    public Uyeler() {
+        super();
+       
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		PrintWriter out = response.getWriter();
+		
+		
+		
+		newuser= request.getParameter("kullaniciadi");
+		passwd = request.getParameter("sifre");
+		passwdtekrar = request.getParameter("sifretekrar");
+		
+		out.println("<html>"+
+					"<head>"+
+					"<link  href=\"bootstrap/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+
+					"<link  href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+
+					"<link  href=\"bootstrap/css/bootstrap-responsive.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+
+					"<link  href=\"bootstrap/css/bootstrap-responsive.min.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+
+					"<link  href=\"css/styles.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+	
+					"</head>"+
+					"<body>"
+				);
+		
+		if(passwd.equals(passwdtekrar))
+		{
+			username = username + newuser +"\n";
+			out.println("<form action=\"SiparisServlet\" method=\"get\">" +
+					"<textarea rows=\"30\" cols=\"30\" id=\"textarea\">" +username + "</textarea><br>"+
+					"<h4> Uyeliginiz Aktif edilmistir.. </h4>" +
+					"<input type=\"submit\" class=\"btn btn-success\" value=\"YEMEK SIPARISINE DON\">"+
+					
+					"</form>");
+			
+		}
+		
+		out.println("</body>" +
+				"</html>");
+		
+		
+	
+				
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

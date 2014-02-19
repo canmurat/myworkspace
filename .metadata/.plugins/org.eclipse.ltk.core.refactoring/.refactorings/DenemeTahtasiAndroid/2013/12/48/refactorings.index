@@ -1,0 +1,12 @@
+1385901793900	Rename field 'spinner1'
+1385901806770	Rename field 'spinner2'
+1385901833709	Rename field 'spinner3'
+1385901840408	Rename field 'spinner4'
+1385905642478	Delete element
+1385914386168	Rename field 'buttonYemek'
+1385914574577	Rename field 'textSalata'
+1385914589100	Rename field 'textIcecek'
+1385914603481	Rename field 'textYemek'
+1385914618009	Rename field 'textTatli'
+1385914747762	Extracts string 'ok' into R.string.ok
+1385927867213	Extracts string 'Yemek Sepetim' into R.string.yemek_sepetim

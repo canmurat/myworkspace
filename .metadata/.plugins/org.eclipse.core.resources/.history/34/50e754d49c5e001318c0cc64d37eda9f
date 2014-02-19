@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/rowid"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.17"
+        android:text="rowid"
+        android:width="8dp" />
+
+    <TextView
+        android:id="@+id/adet"
+        android:layout_width="20dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.31"
+        android:text="  Adet"
+        android:width="100dip" />
+
+    <TextView
+        android:id="@+id/alinan"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.42"
+        android:width="100dip" />
+
+    <TextView
+        android:id="@+id/fiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="Fiyat"
+        android:width="60dp" />
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_delete"
+        android:onClick="DeleteRow" />
+
+</LinearLayout>

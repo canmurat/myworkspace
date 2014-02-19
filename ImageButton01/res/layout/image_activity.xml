@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showImageButton1Info"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showImageButton2Info"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showImageButton3Info"
+        android:src="@drawable/ic_launcher" />
+
+</RelativeLayout>

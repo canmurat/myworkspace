@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+p
+{
+ text-decoration:line-through;
+}
+
+.ornek
+{
+	border:15px solid black;
+}
+
+#div1
+{
+	height:300px;
+	width:1300px;
+	background-color:yellow;
+	
+}
+#div2
+{
+	height:300px;
+	width:400px;
+	float:left;
+	background-color:pink;
+}
+#div3
+{
+	height:300px;
+	width:400px;
+	float:right;
+	background-color:brown;
+}
+#div4
+{
+	height:300px;
+	width:1700px;
+	margin-top:0;
+	background-color:green;
+}

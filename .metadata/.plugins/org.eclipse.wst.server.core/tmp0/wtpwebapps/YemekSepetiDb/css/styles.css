@@ -1,0 +1,236 @@
+@CHARSET "UTF-8";
+
+table {
+	width: 500px;
+	float: left;
+}
+
+.tr1td1 {
+	align: left;
+	width: 300px;
+}
+
+.tr1td2 {
+	width: 200px;
+	align: left;
+}
+
+.tr2td1 {
+	width: 300px;
+	align: left;
+}
+
+.tr2td2 {
+	width: 200px;
+	align: left;
+}
+
+.tr3td1 {
+	align: left;
+	width: 300px;
+}
+
+.tr3td2 {
+	align: left;
+	width: 200px;
+}
+
+#templatemo_menu {
+	float: right;
+	width: 600px;
+	padding: 0 10px;
+}
+
+ul {
+	list-style-type: none;
+	height: 80px;
+	width: 663px;
+	margin: auto;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul a {
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-right: 32px;
+	padding-left: 32px;
+	display: block;
+	line-height: 80px;
+	text-decoration: none;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 21px;
+	color: #371C1C;
+}
+
+li {
+	float: left;
+}
+
+#anadiv {
+	width: 1200px;
+	height: 0px;
+}
+
+#solparca {
+	float: left;
+	width: 550px;
+	height: 850px;
+}
+
+#sagparca {
+	position: relative;
+	width: 650px;
+	float: right;
+	right: 85px;
+	
+}
+
+#altparca {
+	clear: both;
+	width: 100px;
+	text-align: center;
+}
+
+#headerdiv {
+	width: 1200px;
+	height: 200px;
+	background-image: url("/YemekSiparis/images/slider4.jpg");
+}
+
+#ustdiv {
+	height: 150px;
+	width: 1300px;
+}
+#kredikart{
+	position:absolute;
+	height:300px;
+	width: 700px;
+	margin-top:390px;
+	
+	background-image: url("/YemekSepetiDb/images/kredi_kart.jpg");
+}
+#mytable{
+	position:relative;
+	width:650px;
+	height:350px;
+	margin-top:0px;
+}
+#mytable2{
+	
+	margin-top:350px;
+	float:right;
+}
+
+#asagiyazilacakMesaj
+{
+	position:fixed;
+	margin-top:450px;
+	margin-left:300px;
+}
+
+#neyiyelim
+{
+	background-image: url("/YemekSepetiDb/images/neyiyelim.jpg");
+	width: 504px;
+	height: 509px;
+	
+}
+
+
+#myframe {
+	width: 400px;
+	height: 800px;
+}
+
+#uyeOlTablo
+{
+	position:absolute;
+	left:350px;
+}
+
+#textareastyle {
+	width: 800px;
+	height: 900px;
+}
+
+#Loginform {
+	width: 300px;
+}
+
+#buyukdiv {
+	width: 1700px;
+	height: 1100px;
+	position: relative;
+}
+
+#girissol {
+	position:absolute;
+	margin-left:520px;
+	margin-top:300px;
+	width: 300px;
+	height: 400px;
+	
+}
+
+
+#ortadakitanitim {
+	position:absolute;
+	background-image: url("/YemekSiparis/images/sandivic.jpg");
+	width: 500px;
+	height: 250px;
+	margin-left: 400px;
+}
+
+#uyeolsag {
+	width: 600px;
+	height: 400px;
+	float: right;
+}
+
+#asagidakidiv {
+	width: 1500px;
+	height: 700px;
+	float: left;
+}
+
+#h3 {
+	color: red;
+}
+
+#yemeksepetiyemekler {
+	width: 900px;
+	height: 500px;
+}
+
+#yemeksepetiicecekler {
+	width: 900px;
+	height: 500px;
+}
+
+#yemeksepetitatlilar {
+	width: 900px;
+	height: 500px;
+}
+
+#hakkimizdaustdiv {
+	width: 1200px;
+	height: 200px;
+	background-image: url("/YemekSiparis/images/yesillk.jpg");
+}
+
+#hakkimizdadiv {
+	width: 1200px;
+	height: 300px;
+}
+
+#hakkimizdaaltdiv {
+	width: 1200px;
+	height: 700px;
+	background-size: auto 100%; background-repeat : no-repeat;
+	background-image: url("/YemekSiparis/images/restaurant.jpg");
+	background-repeat: no-repeat;
+}

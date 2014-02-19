@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DenemeTahtasiAndroid</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Tatli_Seciniz">Tatli Seciniz : </string>
+    <string name="Yiyecek_Seciniz">Yiyecek Seciniz : </string>
+    <string name="Icecek_Seciniz">Icecek Seciniz : </string>
+    <string name="Salata_Seciniz">Salata Seciniz : </string>
+    <string name="tamam"> Ok </string>
+    <string name="Adet">Adet</string>
+    <string-array name="spinner_yemekler">
+        
+        <item >Fırında Köfte 13 Tl</item>
+        <item >Tavuk Sote 10 Tl</item>
+        <item> Oltu Kebabı 15 Tl</item>
+        <item >Pilav  5 Tl </item>
+        <item >Makarna  5 Tl </item>
+        <item >Kuru Fasulye 5 Tl</item>
+        <item >Mantı 5 Tl</item>
+        <item >Ali Nazik 10 Tl</item>
+        <item ></item>
+        <item >Ice cream sandwich</item>
+        <item >Jelly Bean</item>
+    </string-array>
+    
+    
+    
+    <string-array name="spinner_icecekler">
+        
+        <item >Astro</item>
+        <item >Bender</item>
+        <item >Cupcake</item>
+        <item >Donut</item>
+        <item >Eclair</item>
+        <item >Froyo</item>
+        <item >Gingerbread</item>
+        <item >Honeycomb</item>
+        <item >Ice cream sandwich</item>
+        <item >Jelly Bean</item>
+    </string-array>
+    
+    <string-array name="spinner_salatalar">
+        
+        <item >Astro</item>
+        <item >Bender</item>
+        <item >Cupcake</item>
+        <item >Donut</item>
+        <item >Eclair</item>
+        <item >Froyo</item>
+        <item >Gingerbread</item>
+        <item >Honeycomb</item>
+        <item >Ice cream sandwich</item>
+        <item >Jelly Bean</item>
+    </string-array>
+    
+    <string-array name="spinner_tatlilar">
+        
+        <item >Astro</item>
+        <item >Bender</item>
+        <item >Cupcake</item>
+        <item >Donut</item>
+        <item >Eclair</item>
+        <item >Froyo</item>
+        <item >Gingerbread</item>
+        <item >Honeycomb</item>
+        <item >Ice cream sandwich</item>
+        <item >Jelly Bean</item>
+    </string-array>
+        <string name="yemek_sepetim">Yemek Sepetim</string>
+   
+
+</resources>

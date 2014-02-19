@@ -1,0 +1,63 @@
+package com.Siparis;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/UyeOlServlet")
+public class UyeOlServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+ 
+    public UyeOlServlet() {
+        super();
+        
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<html>"+
+		"<head>"+
+				
+		"</head>"+
+		"<script>"+
+		"function uyelikAl(){" +
+		"var kullaniciadi =document.getElementById('kullaniciadial').value;" +
+		"var sifre =document.getElemetById('sifreal').value;"+
+		"var sifretekrar = document.getElementById('sifrealtekrar').value;"+
+		"if(!sifre.equals(sifretekrar)){" +
+		"alert(\"Wrong!\")"+
+		"}"+
+		
+		
+		"</script>"+
+		"<body>"+
+		"<FORM ACTION=\"http://localhost:8080/YemekSiparis/Uyeler\" METHOD=\"get\">"+
+		
+		"Kullanici Adi : <input type='text' name='kullaniciadi'> <br>"+
+		"Sifre :         <input type='password' name='sifre'><br> "+
+		"Sifre Tekrar :  <input type='password' name='sifretekrar'><br> "+
+		"<input type=\"submit\" value=\"submit\">"+
+		"</FORM>"+
+
+		"</body>"+
+		"</html>"
+		
+		
+);
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

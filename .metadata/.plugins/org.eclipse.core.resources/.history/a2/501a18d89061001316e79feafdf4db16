@@ -1,0 +1,203 @@
+package com.Siparis;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/SiparisServlet")
+public class SiparisServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	ArrayList<String> secilenYiyeceklerListesi = new ArrayList<String>();
+	ArrayList<String> secilenIceceklerListesi = new ArrayList<String>();
+	ArrayList<String> secilenTatlilarListesi = new ArrayList<String>();
+	int secilmisYemekMiktari;
+	int secilmisIcecekMiktari;
+	int secilmisTatliMiktari;
+       
+	ServletUtilities sv = new ServletUtilities();
+   
+    public SiparisServlet() {
+        super();
+     
+    }
+    
+    public String secilenlereYazdir(String deger)
+    {
+    	return deger;
+    }
+
+	
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		
+//		String secilenYemek = request.getParameter("yiyeceklerkutusu");
+//		String secilenIcecek = request.getParameter("iceceklerkutusu");
+//		String secilenTatli = request.getParameter("tatlilarkutusu");
+//		secilenYiyeceklerListesi.add(secilenYemek);
+//		secilenIceceklerListesi.add(secilenIcecek);
+//		secilenTatlilarListesi.add(secilenTatli);
+//		secilmisYemekMiktari += 1;
+//		secilmisIcecekMiktari += 1;
+//		secilmisTatliMiktari += 1;
+//		
+//		RequestDispatcher requestDispatcher =
+//			    request.getRequestDispatcher("/YemekSiparis/src/UyeOlServlet");
+//		requestDispatcher.include(request,response);
+		PrintWriter out = response.getWriter();
+//		out.println(request.getContextPath());
+		response.setContentType("text/html");
+		out.println("<!DOCTYPE html>" + 	
+					"<head><title> Ana Sayfa  </title>" +
+					"<link  href=\"bootstrap/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+
+					"<link  href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+
+					"<link  href=\"bootstrap/css/bootstrap-responsive.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+
+					"<link  href=\"bootstrap/css/bootstrap-responsive.min.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+
+					"<link  href=\"css/styles.css\" rel=\"stylesheet\" type=\"text/css\" />\n"+	
+					"</head>" +
+					"<body>" +
+					"<script>" +		
+					
+					"function yemekleriYazdirma() {"+
+						"var e = document.getElementById(\"yiyeceklerkutusu\"); "+
+						"secilenYemek = e.options[e.selectedIndex].value.replace(/[0-9]/g,'');"+
+						"var secilenYemekFiyati = parseInt(e.options[e.selectedIndex].value.replace(/[^0-9]/g,''));"+
+						"var adet = parseInt(document.getElementById(\"yemekadetkutusu\").value);"+
+						"if(adet==\"\"||isNaN(adet)){"+
+							"adet = 1; }"+
+						"document.getElementById(\"secilenyemeklertexti\").value += secilenYemek+ '(' + adet + ' adet),';   " +
+						
+						"var deger = parseInt(document.getElementById(\"toplamyemeklertexti\").value);" +
+						"document.getElementById(\"toplamyemeklertexti\").value = +document.getElementById(\"toplamyemeklertexti\").value + secilenYemekFiyati*adet; " +				
+						"var genelToplam = parseInt(document.getElementById(\"geneltoplamtexti\").value);" +
+						"document.getElementById(\"geneltoplamtexti\").value = secilenYemekFiyati + +document.getElementById(\"geneltoplamtexti\").value; }"+
+					"function icecekleriYazdirma(){ "+
+						"var e = document.getElementById(\"iceceklerkutusu\"); "+
+						"secilenIcecek = e.options[e.selectedIndex].value.replace(/[0-9]/g,'');"+
+						"var secilenIcecekFiyati = parseInt(e.options[e.selectedIndex].value.replace(/[^0-9]/g,''));"+
+						"var adet = parseInt(document.getElementById(\"icecekadetkutusu\").value);"+
+						"if(adet==\"\"||isNaN(adet)){"+
+							"adet = 1; }"+
+						"document.getElementById(\"secileniceceklertexti\").value += secilenIcecek + '(' + adet + ' adet),';   " +
+						"var deger = parseInt(document.getElementById(\"toplamiceceklertexti\").value);" +
+						"document.getElementById(\"toplamiceceklertexti\").value = +document.getElementById(\"toplamiceceklertexti\").value  + secilenIcecekFiyati*adet; " +				
+						"var genelToplam = parseInt(document.getElementById(\"geneltoplamtexti\").value);" +
+						"document.getElementById(\"geneltoplamtexti\").value = secilenIcecekFiyati+ +document.getElementById(\"geneltoplamtexti\").value; }"+
+					"function tatlilariYazdirma(){ "+
+						"var e = document.getElementById(\"tatlilarkutusu\"); "+
+						"secilenTatli = e.options[e.selectedIndex].value.replace(/[0-9]/g,'');"+
+						"var secilenTatliFiyati = parseInt(e.options[e.selectedIndex].value.replace(/[^0-9]/g,''));"+
+						"var adet = parseInt(document.getElementById(\"tatliadetkutusu\").value);"+
+						"if(adet==\"\"||isNaN(adet)){"+
+							"adet = 1; }"+
+						"document.getElementById(\"secilentatlilartexti\").value += secilenTatli + '(' + adet + ' adet),';   " +
+						"var deger = parseInt(document.getElementById(\"toplamtatlilartexti\").value);" +
+						"document.getElementById(\"toplamtatlilartexti\").value = +document.getElementById(\"toplamtatlilartexti\").value  + secilenTatliFiyati*adet; " +				
+						"var genelToplam = parseInt(document.getElementById(\"geneltoplamtexti\").value);" +
+						"document.getElementById(\"geneltoplamtexti\").value = secilenTatliFiyati + +document.getElementById(\"geneltoplamtexti\").value; }"+
+					"</script>" +
+						
+					
+		           
+					"<form action =\"SiparisServlet\"  method = \"GET\" >" +
+					
+					"<div id=\"anadiv\">"+
+						"<div id=\"headerdiv\">"+
+							"<h4> Burasý Header </h4>"+
+						"</div>"+
+						"<div = id=\"ustdiv\">"+
+		            	"<ul>"+
+		                	"<li><a href=\"#\">Ana Sayfa</a></li>" +
+		                	"<li><a href=\"http://localhost:8080/YemekSiparis/SiparisServlet\" > Hakkimizda </a></li>"+
+		                	"<li><a href=\"http://localhost:8080/YemekSiparis/UyeOlServlet\"> UyeOl </a></li>"+
+		                	"<li><a http://localhost:8080/YemekSiparis/Uyeler\"> Kisiler </a></li>"+
+		                	
+		                "</ul>"+
+		                "</div>"+
+					"<div id=\"solparca\">" +
+						"<form align='left' action=\"Uyeler\"  method=\"get\" >"+
+						"Kullanici Adi : <input type='text' id=\"username\"> <br>"+
+						"Sifre :         <input type='password' id=\"password\"><br> "+
+						"Beni hatirla :<input type='checkbox' name='checkbox' ><br>"+
+						"<input type='button'class=\"btn btn-success\" value='Giris'>"+
+						"</form>"+
+					
+					"</div>"+
+		            "<div id=\"sagparca\">" +
+					"<table class =\"table table-bordered\" >" +
+						"<tr>" +
+							"<td class=\"tr1td1\"> " +
+								"Yiyecekler  :" + ServletUtilities.yiyecekSec() + 
+								"<br> Adet :<input type=\"text\" class=\"form-control\" id ='yemekadetkutusu'> " +
+							//	<input type='text' name='text1' id ='yemekadetkutusu'>
+								"<button type='button' class=\"btn btn-success\" value='tamam' onclick=\"yemekleriYazdirma()\" >Tamam </button> " +
+							"</td>" +
+							"<td class=\"tr1td2\"> " +
+								"Secilen Yiyecekler : <textarea class=\"form-control\" rows=\"3\" name='fname' id = 'secilenyemeklertexti' width = '200' ></textarea>" +
+								"Toplam :  <input type='text' name='icecektexti' id = 'toplamyemeklertexti' >" +
+								
+						
+							"</td>" +
+						"</tr>" +
+						"<tr>" +
+							"<td class=\"tr2td1\">" +
+								"Icecekler :" +  ServletUtilities.icecekSec() + 
+								"<br> Adet : <input type='text' name='text2' id ='icecekadetkutusu' > " +
+								"<button type='button' class=\"btn btn-success\" value='Tamam' onclick=\"icecekleriYazdirma()\" > Tamam </button>" +
+							"</td>" +
+							"<td class=\"tr2td2\">" +
+								"Secilen Icecekler : <textarea class=\"form-control\" rows=\"3\"  name='fname' id = 'secileniceceklertexti'  ></textarea>"  +
+								"Toplam :  <input type='text' name='icecektexti' id = 'toplamiceceklertexti' >" +
+							"</td>" +
+						"</tr>" +
+						"<tr>" +
+							"<td class=\"tr3td1\">" +
+								"Tatlilar :" + ServletUtilities.tatliSec() +
+								"<br> Adet : <input type='text' name='text2' id ='tatliadetkutusu'> " +
+								"<button type='button' class=\"btn btn-success\" value='Tamam' onclick =\"tatlilariYazdirma()\"> Tamam </button> " +
+							"</td>"+
+							"<td class=\"tr3td2\">" +
+								"Secilen Tatlilar : <textarea class=\"form-control\" name='text3' id = 'secilentatlilartexti' ></textarea>"+
+								"Toplam :  <input type='text' name='tatlitexti' id = 'toplamtatlilartexti' >" +
+							"</td>"+ 
+						"<tr>" +
+							"<td>"+ 
+								"Toplam Tutar :  <input type='text' name='geneltoplam' id = 'geneltoplamtexti' >" +
+							"</td>"+
+							"<td>"+ 
+							
+							"</td>"+
+						"</tr>"	+
+						"<tr>" +
+							"<td colspan=2>"+
+								"<p> burasý son satýr.</p>" +
+								"<button type='button'  class=\"btn btn-success\" > Siparisi Onayla </button> " +
+							"</td>"+
+						"</tr>"+
+					"</table>" +
+					"</form>" +
+					
+					"<div id=\"altparca\">"+
+					"Copyright © W3Schools.com</div>"+
+						
+					"</div>" +
+					
+					"</body>" + 
+					"</html>");
+		
+		
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.AndroidYemekSepetiDb"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.KullaniciGiris"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.MainClass"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.ActivityYemek"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.YoneticiPanel"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.AndroidYemekSepetiDb.PanelSiparisler"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.PanelYemekler"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.PanelIcecekler"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.PanelSalatalar"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.PanelTatlilar"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.ActivityIcecek"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.ActivitySalata"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.ActivityTatli"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name="com.example.AndroidYemekSepetiDb.SiparisVer"
+            android:noHistory="true" 
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.AndroidYemekSepetiDb.Sonuc"
+            android:label="@string/app_name" >
+           
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.AndroidYemekSepetiDb.SiparisleriGoster"
+            android:label="@string/app_name" >
+           
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.AndroidYemekSepetiDb.Dosya"
+            android:label="@string/app_name" >
+           
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.AndroidYemekSepetiDb.UyeOl"
+            android:label="@string/app_name" >
+           
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+     
+       
+        
+       
+        
+
+    </application>
+
+</manifest>

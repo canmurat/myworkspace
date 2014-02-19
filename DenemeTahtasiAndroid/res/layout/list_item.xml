@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- Header -->
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff347c12" >
+
+        <TextView
+            android:id="@+id/item1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:height="30dip"
+            android:text="Adet"
+            android:width="30dip" />
+
+        <TextView
+            android:id="@+id/item2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:height="30dip"
+            android:text="  Alınan"
+            android:width="100dip" />
+
+        <TextView
+            android:id="@+id/item3"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:height="30dip"
+            android:text="Price"
+            android:width="100dip" />
+
+        <TextView
+            android:id="@+id/item4"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:height="30dip"
+            android:text="Delete"
+            android:width="100dip" />
+    </LinearLayout>
+
+    <!-- List Divider -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="?android:attr/listDivider" />
+
+    <!-- ListView (grid_items) -->
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+        <Button
+            android:id="@+id/geridon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geri Dön"
+            android:onClick="GeriDon" />
+
+        <TextView
+            android:id="@+id/tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+</LinearLayout>

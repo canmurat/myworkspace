@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="FormCss.css">
+<script>
+
+var sayýsalifade = /^[0-9]+$/;
+var emailifadesi = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+
+
+function isimsoyisimAl()
+{
+  var isim    = decument.forms["formum"]["isim"].value;
+  var soyisim = decument.forms["formum"]["soyisim"].value;
+  if ( isim == null || isim == "" )
+  {
+    alert("Ýsim alanýna birþey girmediniz!");
+    return false;
+  }
+  else if ( soyisim == null || soyisim == "")
+  {
+    alert("Soy isim alanýna deger girmediniz!);
+    return false;
+  }
+}
+
+function yasal()
+{
+  var yas = document.forms["formum"]["yas"].value;
+  
+  if ( yas.match(sayýsalifade))
+  {
+    return true;
+    alert("sayý ifadesi dogru !");
+  }
+  else
+  {
+    alert("sayý ifadesi yanlýs ");
+    return false;
+  }
+}
+
+function tcnoal()
+{
+  var tcno = document.forms["formum"]["tcno"].value;
+  if(tcno.length > 11 || !tcno.match(sayýsalifade))
+  {
+    alert("Hatalý Tc Numarasý girdiniz !");
+  }
+  else
+  {
+    alert("Tc No dogru !");
+
+  }
+}
+
+function mailal()
+{
+  var email = document.forms["formum"]["mail"].value;
+  if (email.match(emailifadesi))
+  {
+    alert("Dogru formatta email !");
+    return true;
+  }
+  else
+  {
+    alert("Geçersiz email formatý ! ");
+  } 
+}
+</script>
+</head>
+
+
+
+<body>
+
+
+
+<form name = "formum" onclick= "return isimsoyisimAl()" >
+
+
+<p class="paragraf">  Adýnýz  :                <input type ="text" name = "isim" >          <br>    </p>
+<p class="paragraf">  Soyadýnýz :              <input type ="text" name = "soyisim" >       <br>    </p>
+<p class="paragraf">  Yaþýnýz :                <input type ="text" name = "yaþ" >           <br>    </p> 
+<p class="paragraf">  T.C Kimlik Numaranýz :   <input type ="text" name = "tcno" >          <br>    </p>
+<p class="paragraf">  Mail Adresiniz :         <input type ="text" name = "mail" >          <br>    </p>
+
+<input type='submit' value='Kayýt Ol' />
+
+</form> 
+
+</body>
+</html> 

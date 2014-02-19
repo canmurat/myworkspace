@@ -1,0 +1,57 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+    
+    <EditText
+        android:id="@+id/adEditText"
+        android:hint="@string/titleAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+    
+    <EditText
+        android:id="@+id/aciklamaEditText"
+        android:hint="@string/titleAciklama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/kaydetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:text="@string/kaydetButton" />
+        
+        <Button
+            android:id="@+id/guncelleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:text="@string/guncelleButton" />
+        
+        <Button
+            android:id="@+id/silButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:text="@string/silButton" />
+
+    </LinearLayout>
+    
+
+    <ListView
+        android:id="@+id/sozlukListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:choiceMode="multipleChoice">
+    </ListView>
+
+</LinearLayout>

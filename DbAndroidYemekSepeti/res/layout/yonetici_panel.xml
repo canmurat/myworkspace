@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnSiparisler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnSiparisler"
+        android:text="Siparisler " />
+
+    <Button
+        android:id="@+id/btnPanelYemekler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnYemekler"
+        android:text="Yemekler" />
+
+    <Button
+        android:id="@+id/btnPanelIcecekler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnIcecekler"
+        android:text="Icecekler" />
+
+    <Button
+        android:id="@+id/btnPanelSalatalar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnSalatalar"
+        android:text="Salatalar" />
+
+    <Button
+        android:id="@+id/btnPanelTatlilar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tatlılar"
+        android:onClick="btnTatlilar"  />
+
+    <Button
+        android:id="@+id/btnPanelCikis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cıkıs"
+        android:onClick="btnCikis" />
+
+</LinearLayout>

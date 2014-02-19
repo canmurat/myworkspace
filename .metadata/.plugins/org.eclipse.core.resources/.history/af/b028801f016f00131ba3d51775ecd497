@@ -1,0 +1,235 @@
+package com.hastane;
+
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.factories.FormFactory;
+import com.jgoodies.forms.layout.RowSpec;
+
+public class HastaIslemleri extends JFrame {
+	
+    static Connection conn;
+	static DefaultTableModel model;
+	private JPanel contentPane;
+	private JTextField textAra;
+	private static JTable table;
+	String HastaTcNo;
+	String Ad;
+	String Soyad;
+	String DogumTarih;
+	String Cinsiyet;
+	String Adres;
+	String Telefon;
+	String KanGurubu;
+	static String[] basliklar = { "HastaTcNo", "Ad", "Soyad", "Dogum Tarihi",
+		"Cinsiyet", "Adres", "Telefon", "Kan Gurubu" };
+	JScrollPane pane;
+	private JTable table_1;
+	
+	/**
+	 * Launch the application.
+	 * @throws ClassNotFoundException 
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					HastaIslemleri frame = new HastaIslemleri();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public static void TabloyuDoldur(String sorgu)
+			throws ClassNotFoundException {
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=Hastane;user=mehmet;password=1234567";
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+		try {
+			conn = DriverManager.getConnection(url);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		try {
+
+			PreparedStatement ps = conn.prepareStatement(sorgu);
+
+			ResultSet rs = ps.executeQuery();
+			int i = 0;
+			while (rs.next()) {
+
+				
+				String HastaTcNo;
+				String Ad;
+				String Soyad;
+				String DogumTarih;
+				String Cinsiyet;
+				String Adres;
+				String Telefon;
+				String KanGurubu;
+				HastaTcNo = rs.getString("HastaTcNo");
+				Ad = rs.getString("Ad");
+				Soyad = rs.getString("Soyad");
+				DogumTarih = rs.getString("DogumTarih");
+				Cinsiyet = rs.getString("Cinsiyet");
+				Adres = rs.getString("Adres");
+				Telefon = rs.getString("Telefon");
+				KanGurubu = rs.getString("KanGurubu");
+
+				model.addRow(new Object[] { HastaTcNo, Ad, Soyad, DogumTarih,
+						Cinsiyet, Adres, Telefon, KanGurubu });
+				i++;
+			}
+			if (i < 1) {
+				JOptionPane.showMessageDialog(null, "No Record Found", "Error",
+						JOptionPane.ERROR_MESSAGE);
+			}
+			if (i == 1) {
+				System.out.println(i + " Record Found");
+			}
+
+			rs.close();
+			ps.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public HastaIslemleri() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 705, 422);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new FormLayout(new ColumnSpec[] {
+				ColumnSpec.decode("35px"),
+				ColumnSpec.decode("82px"),
+				FormFactory.UNRELATED_GAP_COLSPEC,
+				ColumnSpec.decode("119px:grow"),
+				ColumnSpec.decode("73px"),
+				ColumnSpec.decode("130px"),},
+			new RowSpec[] {
+				RowSpec.decode("27px"),
+				RowSpec.decode("23px"),
+				RowSpec.decode("272px:grow"),
+				RowSpec.decode("50px"),}));
+		
+		JLabel lblTcKimlikNo = new JLabel("Tc Kimlik No : ");
+		contentPane.add(lblTcKimlikNo, "2, 2, fill, center");
+		
+		textAra = new JTextField();
+		contentPane.add(textAra, "4, 2, fill, center");
+		textAra.setColumns(10);
+		
+		setTable(new JTable());
+		getTable().setBounds(40, 100, 575, 187);
+		contentPane.add(getTable());
+		
+		JButton btnNewButton = new JButton("Goruntule");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				try {
+					TabloyuDoldur("select * from hastalar");
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		
+		JButton btnHastaAra = new JButton("Hasta Ara");
+		contentPane.add(btnHastaAra, "6, 2, fill, top");
+		
+		table_1 = new JTable();
+		contentPane.add(table_1, "4, 3, 2, 1, fill, fill");
+		contentPane.add(btnNewButton, "6, 4, left, fill");
+		
+		model = new DefaultTableModel();
+		model.setColumnIdentifiers(basliklar);
+		table_1.setModel(model);
+		JScrollPane pane = new JScrollPane(table,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+			    JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		add(pane);
+		
+		
+		ListSelectionModel selectionModel = getTable().getSelectionModel();  
+        selectionModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);  
+        selectionModel.addListSelectionListener(new  ListSelectionListener() {
+		
+			public void valueChanged(ListSelectionEvent arg0) {
+				
+				
+			}
+		});  
+	}
+	public static JTable getTable() {
+		return table;
+	}
+
+	public static void setTable(JTable table) {
+		HastaIslemleri.table = table;
+	}
+	class RowListener implements ListSelectionListener  
+	{  
+	    HastaIslemleri readRow;  
+	    JTable table;  
+	   
+	    public RowListener(HastaIslemleri rar)  
+	    {  
+	        readRow = rar;  
+	        table = HastaIslemleri.getTable();  
+	    }  
+	   
+	    public void valueChanged(ListSelectionEvent e)  
+	    {  
+//	        if(!e.getValueIsAdjusting())  
+//	        {  
+//	            ListSelectionModel model = table.getSelectionModel();  
+//	            int lead = model.getLeadSelectionIndex();  
+//	            displayRowValues(lead);  
+//	        }  
+	    }  
+	   
+//	    private void displayRowValues(int rowIndex)  
+//	    {  
+//	        int columns = table.getColumnCount();  
+//	        String s = "";  
+//	        for(int col = 0; col < columns; col++)  
+//	        {  
+//	            Object o = table.getValueAt(rowIndex, col);  
+//	            s += o.toString();  
+//	            if(col < columns - 1)  
+//	                s += ", ";  
+//	        }  
+//	        readRow.label.setText(s);  
+//	    }  
+	}  
+}

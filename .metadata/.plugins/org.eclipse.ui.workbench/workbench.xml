@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="71" version="2.0">
+<workbenchAdvisor/>
+<window height="728" maximized="true" width="1024" x="317" y="73">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="91" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
+<coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jst.jsp.core.jspsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1385418060971" focus="true" label="Workspace - Java EE">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SiparisServlet.java" partName="SiparisServlet.java" path="C:/Users/canmurat/workspace/YemekSiparis/src/com/Siparis/SiparisServlet.java" title="SiparisServlet.java" tooltip="YemekSiparis/src/com/Siparis/SiparisServlet.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/YemekSiparis/src/com/Siparis/SiparisServlet.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4105" selectionTopPixel="1384"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServletUtilities.java" partName="ServletUtilities.java" path="C:/Users/canmurat/workspace/YemekSiparis/src/com/Siparis/ServletUtilities.java" title="ServletUtilities.java" tooltip="YemekSiparis/src/com/Siparis/ServletUtilities.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/YemekSiparis/src/com/Siparis/ServletUtilities.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2034" selectionTopPixel="597"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HashmapOrnek.java" partName="HashmapOrnek.java" path="C:/Users/canmurat/workspace/OnlyJava/src/myJavaApps/HashmapOrnek.java" title="HashmapOrnek.java" tooltip="OnlyJava/src/myJavaApps/HashmapOrnek.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OnlyJava/src/myJavaApps/HashmapOrnek.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="303" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Sonuc.java" partName="Sonuc.java" path="C:/Users/canmurat/workspace/TabSampleActivity/src/com/example/tabsampleactivity/Sonuc.java" title="Sonuc.java" tooltip="TabSampleActivity/src/com/example/tabsampleactivity/Sonuc.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TabSampleActivity/src/com/example/tabsampleactivity/Sonuc.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SiparisVer.java" partName="SiparisVer.java" path="C:/Users/canmurat/workspace/TabSampleActivity/src/com/example/tabsampleactivity/SiparisVer.java" title="SiparisVer.java" tooltip="TabSampleActivity/src/com/example/tabsampleactivity/SiparisVer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TabSampleActivity/src/com/example/tabsampleactivity/SiparisVer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4942" selectionTopPixel="2259"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainClass.java" partName="MainClass.java" path="C:/Users/canmurat/workspace/TabSampleActivity/src/com/example/tabsampleactivity/MainClass.java" title="MainClass.java" tooltip="TabSampleActivity/src/com/example/tabsampleactivity/MainClass.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TabSampleActivity/src/com/example/tabsampleactivity/MainClass.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1305" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.ui.views.AllMarkersView" partName="Markers">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.allSeverityField" categoryGroup="org.eclipse.ui.ide.type" markerContentGenerator="org.eclipse.ui.ide.allMarkersGenerator" partName="Markers">
+<columnWidths org.eclipse.ui.ide.allSeverityField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.allSeverityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
+<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.wst.server.ui.ServersView" partName="Servers">
+<viewState CommonNavigator.LINKING_ENABLED="0"/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.jst.j2ee.J2eeMainActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.wst.ws.explorer.explorer"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.wst.server.ui.ServersView"/>
+<show_view_action id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
+<show_view_action id="org.eclipse.ui.views.AllMarkersView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<new_wizard_action id="org.eclipse.jpt.jpa.ui.wizard.newJpaProject"/>
+<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.EarProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.ejb.ui.project.facet.EjbProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.j2ee.jca.ui.internal.wizard.ConnectorProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.appclient.AppClientProjectWizard"/>
+<new_wizard_action id="org.eclipse.wst.web.ui.internal.wizards.SimpleWebProjectWizard"/>
+<new_wizard_action id="org.eclipse.jpt.ui.wizard.newJpaProject"/>
+<new_wizard_action id="org.eclipse.jst.servlet.ui.internal.wizard.AddServletWizard"/>
+<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddSessionBeanWizard"/>
+<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddMessageDrivenBeanWizard"/>
+<new_wizard_action id="org.eclipse.jpt.ui.wizard.newEntity"/>
+<new_wizard_action id="org.eclipse.jst.ws.creation.ui.wizard.serverwizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="org.eclipse.jpt.ui.jpaPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.ui.resourcePerspective"/>
+<perspective_action id="org.eclipse.wst.web.ui.webDevPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottomRight" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.AllMarkersView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.PropertySheet" ratio="0.3"/>
+<view id="org.eclipse.wst.server.ui.ServersView" ratio="0.3"/>
+<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" ratio="0.3"/>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" ratio="0.3"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29903537"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackagesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@393e0cc5" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.2232305" ratioLeft="246" ratioRight="856" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottomRight" ratio="0.6946688" ratioLeft="430" ratioRight="189" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.AllMarkersView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="LabelNotFound"/>
+<page content="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="topRight" ratio="0.7" ratioLeft="525" ratioRight="225" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/YemekSiparis/src/com/Siparis/SiparisServlet.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/YemekSiparis/WebContent/index.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/YemekSiparis/src/com/Siparis/ServletUtilities.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/YemekSiparis/WebContent/styles/functions.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/YemekSiparis/src/com/Siparis/ServletUtilities.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/YemekSiparis/src/com/Siparis/ServletUtilities.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/YemekSiparis/src/com/Siparis/ServletUtilities.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OnlyJava/src/myJavaApps/splitOrnek.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/YemekSiparis/src/com/Siparis/UyeClass.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OnlyJava/src/myJavaApps/HashmapOrnek.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/YemekSiparis/src/com/Siparis/SiparisServlet.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TabSampleActivity/src/com/example/tabsampleactivity/Sonuc.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TabSampleActivity/src/com/example/tabsampleactivity/SiparisVer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TabSampleActivity/src/com/example/tabsampleactivity/MainClass.java"/>
+</editors>
+<item historyLabel="ServletUtilities.java" index="2">
+<position info="not_deleted" x="1438" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="1">
+<position/>
+</item>
+<item historyLabel="index.jsp" index="1">
+<position/>
+</item>
+<item historyLabel="ServletUtilities.java" index="2">
+<position info="not_deleted" x="1438" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="6152" y="0"/>
+</item>
+<item historyLabel="ServletUtilities.java" index="2">
+<position info="not_deleted" x="1438" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="6152" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="1">
+<position info="not_deleted" x="471" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position/>
+</item>
+<item historyLabel="index.jsp" index="1">
+<position info="not_deleted" x="543" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="2651" y="0"/>
+</item>
+<item historyLabel="functions.js" index="3">
+<position info="not_deleted" x="379" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="5686" y="0"/>
+</item>
+<item historyLabel="functions.js" index="3">
+<position info="not_deleted" x="959" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="5659" y="0"/>
+</item>
+<item historyLabel="functions.js" index="3">
+<position info="not_deleted" x="959" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="5526" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="1">
+<position info="not_deleted" x="543" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="2601" y="0"/>
+</item>
+<item historyLabel="ServletUtilities.java" index="2">
+<position info="not_deleted" x="1438" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="2597" y="0"/>
+</item>
+<item historyLabel="ServletUtilities.java" index="4">
+<position info="not_deleted" x="660" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="2597" y="0"/>
+</item>
+<item historyLabel="ServletUtilities.java" index="5">
+<position info="not_deleted" x="660" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="3517" y="0"/>
+</item>
+<item historyLabel="ServletUtilities.java" index="6">
+<position info="not_deleted" x="660" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="5871" y="0"/>
+</item>
+<item historyLabel="ServletUtilities.java" index="6">
+<position info="not_deleted" x="2034" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="5871" y="0"/>
+</item>
+<item historyLabel="splitOrnek.java" index="7">
+<position info="not_deleted" x="229" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="0">
+<position info="not_deleted" x="4105" y="0"/>
+</item>
+<item historyLabel="UyeClass.java" index="8">
+<position info="not_deleted" x="2119" y="0"/>
+</item>
+<item historyLabel="HashmapOrnek.java" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="10">
+<position info="not_deleted" x="4105" y="0"/>
+</item>
+<item historyLabel="HashmapOrnek.java" index="9">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="10">
+<position info="not_deleted" x="4105" y="0"/>
+</item>
+<item historyLabel="HashmapOrnek.java" index="9">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="UyeClass.java" index="8">
+<position info="not_deleted" x="2055" y="0"/>
+</item>
+<item historyLabel="HashmapOrnek.java" index="9">
+<position info="not_deleted" x="303" y="0"/>
+</item>
+<item historyLabel="Sonuc.java" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SiparisVer.java" index="12">
+<position info="not_deleted" x="7321" y="0"/>
+</item>
+<item historyLabel="MainClass.java" index="13">
+<position info="not_deleted" x="374" y="0"/>
+</item>
+<item historyLabel="SiparisVer.java" index="12">
+<position info="not_deleted" x="7876" y="0"/>
+</item>
+<item historyLabel="MainClass.java" index="13">
+<position info="not_deleted" x="450" y="0"/>
+</item>
+<item historyLabel="SiparisServlet.java" index="10">
+<position info="not_deleted" x="4105" y="0"/>
+</item>
+<item historyLabel="SiparisVer.java" index="12">
+<position info="not_deleted" x="7876" y="0"/>
+</item>
+<item historyLabel="MainClass.java" index="13">
+<position info="not_deleted" x="1305" y="0"/>
+</item>
+<item active="true" historyLabel="SiparisVer.java" index="12">
+<position info="not_deleted" x="7876" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottomRight"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainClass.java" tooltip="TabSampleActivity/src/com/example/tabsampleactivity/MainClass.java">
+<persistable path="/TabSampleActivity/src/com/example/tabsampleactivity/MainClass.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SiparisVer.java" tooltip="TabSampleActivity/src/com/example/tabsampleactivity/SiparisVer.java">
+<persistable path="/TabSampleActivity/src/com/example/tabsampleactivity/SiparisVer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Sonuc.java" tooltip="TabSampleActivity/src/com/example/tabsampleactivity/Sonuc.java">
+<persistable path="/TabSampleActivity/src/com/example/tabsampleactivity/Sonuc.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HashmapOrnek.java" tooltip="OnlyJava/src/myJavaApps/HashmapOrnek.java">
+<persistable path="/OnlyJava/src/myJavaApps/HashmapOrnek.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UyeClass.java" tooltip="YemekSiparis/src/com/Siparis/UyeClass.java">
+<persistable path="/YemekSiparis/src/com/Siparis/UyeClass.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="splitOrnek.java" tooltip="OnlyJava/src/myJavaApps/splitOrnek.java">
+<persistable path="/OnlyJava/src/myJavaApps/splitOrnek.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServletUtilities.java" tooltip="YemekSiparis/src/com/Siparis/ServletUtilities.java">
+<persistable path="/YemekSiparis/src/com/Siparis/ServletUtilities.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SiparisServlet.java" tooltip="YemekSiparis/src/com/Siparis/SiparisServlet.java">
+<persistable path="/YemekSiparis/src/com/Siparis/SiparisServlet.java"/>
+</file>
+</mruList>
+</workbench>

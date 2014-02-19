@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/kullaniciad"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editSoyad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/kullanicisoyad"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editDTarih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/kullaniciDtarih"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/kullanicitel"
+            android:inputType="phone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editAdres"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:ems="10"
+            android:hint="@string/kullaniciadres" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editEposta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/kullaniciEposta"
+            android:inputType="textEmailAddress" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editSifre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/kullaniciSifre"
+            android:inputType="numberPassword" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editSifreTekrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/kullaniciSifreTekrar"
+            android:inputType="numberPassword" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnUyeEkle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="UyeOlButton"
+            android:text="Uye Ol" />
+
+        <Button
+            android:id="@+id/btnSiparisler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geri Don"
+            android:onClick="GeriDon" />
+
+    </LinearLayout>
+
+</LinearLayout>

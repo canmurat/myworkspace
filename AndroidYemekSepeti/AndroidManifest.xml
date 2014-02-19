@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tabsampleactivity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.tabsampleactivity.MainClass"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tabsampleactivity.ActivityYemek"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tabsampleactivity.ActivityIcecek"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       
+        <activity
+            android:name="com.example.tabsampleactivity.ActivitySalata"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       
+        <activity
+            android:name="com.example.tabsampleactivity.ActivityTatli"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name="com.example.tabsampleactivity.SiparisVer"
+            android:noHistory="true" 
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.tabsampleactivity.Sonuc"
+            android:label="@string/app_name" >
+           
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.tabsampleactivity.SiparisleriGoster"
+            android:label="@string/app_name" >
+           
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.tabsampleactivity.Dosya"
+            android:label="@string/app_name" >
+           
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       
+       
+        
+       
+        
+
+    </application>
+
+</manifest>

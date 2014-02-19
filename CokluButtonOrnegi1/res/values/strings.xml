@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hi_label">Hi!</string>
+    <string name="bye_label">Bye!</string>
+    <string name="yo_label">Yo!</string>
+    <string name="button_message_template">You clicked the \'%s\' Widget.</string>
+    <string name="app_name">Hadi Gari</string>
+    <string name="action_settings">action_settings</string>
+
+</resources>

@@ -1,0 +1,85 @@
+package com.Siparis;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/SiparisServlet")
+public class SiparisServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	ArrayList<String> secilenYiyeceklerListesi = new ArrayList<String>();
+	ArrayList<String> secilenIceceklerListesi = new ArrayList<String>();
+	ArrayList<String> secilenTatlilarListesi = new ArrayList<String>();
+	int secilmisYemekMiktari;
+	int secilmisIcecekMiktari;
+	int secilmisTatliMiktari;
+       
+	ServletUtilities sv = new ServletUtilities();
+   
+    public SiparisServlet() {
+        super();
+     
+    }
+    
+    public String secilenlereYazdir(String deger)
+    {
+    	return deger;
+    }
+
+	
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String secilenYemek = request.getParameter("yiyeceklerkutusu");
+		String secilenIcecek = request.getParameter("iceceklerkutusu");
+		String secilenTatli = request.getParameter("tatlilarkutusu");
+		secilenYiyeceklerListesi.add(secilenYemek);
+		secilenIceceklerListesi.add(secilenIcecek);
+		secilenTatlilarListesi.add(secilenTatli);
+		secilmisYemekMiktari +=1;
+		secilmisIcecekMiktari +=1;
+		secilmisTatliMiktari +=1;
+		
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+		out.println("<!DOCTYPE html>" +
+					"<head><title> Ana Sayfa  </title></head>" +
+					"<body bgcolor = orange >" +
+					"<form action=\"SiparisServlet\"method=\"get\">" +
+						"Yiyecekler  :" + ServletUtilities.yiyecekSec("et1","et2","et3","et4","et5") + 
+						"<br> Adet : <input type='text' name='text1'> " +
+						"<input type='submit' value='Tamam' > " +
+						"<input type='text' name='fname' value=" +secilenYiyeceklerListesi.get(secilmisYemekMiktari-1)+ ">" + 
+					"</form>" + 
+					"<form action=\"SiparisServlet\"method=\"get\">" +
+						"Icecekler :" +  ServletUtilities.icecekSec("cola","fanta","kahve","süt","meyvesuyu") + 
+						"<br> Adet : <input type='text' name='text2'> " +
+						"<input type='submit' value='Tamam' > " +
+						"<input type='text' name='fname' value=" +secilenIceceklerListesi.get(secilmisIcecekMiktari-1)+ ">"  + 
+					"</form>" + 
+					
+					"<form action=\"SiparisServlet\"method=\"get\">" +
+						"Tatlilar :" + ServletUtilities.tatliSec("cola","fanta","kahve","süt","meyvesuyu") +
+						"<br> Adet : <input type='text' name='text2'> " +
+						"<input type='submit' value='Tamam' > " +
+						"<input type='text' name='text3' value="+secilenTatlilarListesi.get(secilmisTatliMiktari-1)+">"+
+					"</form>" +
+					"</body>" + 
+					"</html>");
+		
+		
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

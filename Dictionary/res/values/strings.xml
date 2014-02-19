@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Dictionary</string>
+    <string name="titleAd">Ad</string>
+    <string name="titleAciklama">Açıklama</string>
+    <string name="kaydetButton">Kaydet</string>
+    <string name="guncelleButton">Güncelle</string>
+    <string name="silButton">Sil</string>
+    
+
+</resources>

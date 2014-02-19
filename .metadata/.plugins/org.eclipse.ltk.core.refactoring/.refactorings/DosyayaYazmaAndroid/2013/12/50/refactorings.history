@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extracts string &apos;Gonder&apos; into R.string.gonder" description="Extracts string &apos;Gonder&apos; into R.string.gonder" file="/DosyayaYazmaAndroid/res/layout/activity_main.xml" flags="6" id="com.android.ide.eclipse.adt.refactoring.extract.string" mode="EDIT_SOURCE" proj="/DosyayaYazmaAndroid" rplc-all-java="false" rplc-all-xml="false" sel-end="1182" sel-start="1162" stamp="1387143309172" tok-esc="Gonder" xml-attr-name="android:text"/>
+</session>
